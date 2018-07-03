@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:background="@color/colorPrimary">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/iv_image"
+            android:layout_width="@dimen/space_x6"
+            android:layout_height="@dimen/space_x6"
+            android:layout_centerInParent="true"
+            android:src="@mipmap/ic_avatar" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/iv_image"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/space_x0.5"
+            android:text="@string/click_login"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/ts_large" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <View style="@style/line_view" />
+
+            <TextView
+                android:id="@+id/tvMyCollection"
+                style="@style/tv_operating_style"
+                android:background="@drawable/item_selector"
+                android:drawableLeft="@mipmap/ic_collection"
+                android:drawablePadding="@dimen/space_x0.5"
+                android:text="@string/my_collection" />
+
+            <View style="@style/line_view" />
+
+            <TextView
+                android:id="@+id/tvMyBookmark"
+                style="@style/tv_operating_style"
+                android:background="@drawable/item_selector"
+                android:drawableLeft="@mipmap/ic_bookmark"
+                android:drawablePadding="@dimen/space_x0.5"
+                android:text="@string/my_bookmark" />
+
+            <View style="@style/line_view" />
+
+            <TextView
+                android:id="@+id/tvSetting"
+                style="@style/tv_operating_style"
+                android:background="@drawable/item_selector"
+                android:drawableLeft="@mipmap/ic_setting"
+                android:drawablePadding="@dimen/space_x0.5"
+                android:text="@string/setting" />
+
+            <View style="@style/line_view" />
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>
